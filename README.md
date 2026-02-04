@@ -1,6 +1,6 @@
 # AgentIorg-01 🤖 Full Sales Automation System
 
-**Autonomous B2B sales engine for NWN - from research to revenue**
+**Autonomous B2B sales engine - from research to revenue**
 
 ## What This Is
 
@@ -43,7 +43,7 @@ AgentIorg (Main Controller)
 - **DevBot**: Builds calculators, assessments, landing pages
 
 ### ✅ Revenue Streams
-1. **NWN Sales** (primary): 100 emails/week target
+1. **Sales** (primary): 100 emails/week target
 2. **YouTube Content**: Ad revenue from technical content
 3. **Lead Gen Tools**: Network assessment calculators
 4. **Consulting**: Advisory services for enterprise IT
