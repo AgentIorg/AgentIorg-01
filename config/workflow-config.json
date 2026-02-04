@@ -1,0 +1,82 @@
+{
+  "automation": {
+    "enabled": true,
+    "schedule": {
+      "daily_workflow": "0 8 * * *",
+      "weekly_review": "0 8 * * 1",
+      "timezone": "America/Los_Angeles"
+    },
+    "targets": {
+      "daily_emails": 20,
+      "weekly_emails": 100,
+      "response_rate_target": 0.05,
+      "meetings_per_week": 2
+    },
+    "follow_up": {
+      "first_follow_up_days": 7,
+      "second_follow_up_days": 14,
+      "max_follow_ups": 2
+    }
+  },
+  "research": {
+    "sources": [
+      "tech_news",
+      "funding_announcements",
+      "breach_reports",
+      "company_expansions",
+      "hiring_posts"
+    ],
+    "verticals": [
+      "healthcare",
+      "finance",
+      "technology",
+      "government",
+      "manufacturing",
+      "retail",
+      "education"
+    ],
+    "company_size_min": 500,
+    "geography": {
+      "primary": ["WA", "OR", "CA"],
+      "secondary": "nationwide"
+    }
+  },
+  "email_templates": {
+    "cold_outreach": "consultative",
+    "follow_up_1": "value_add",
+    "follow_up_2": "last_touch",
+    "reconnection": "warm_callback"
+  },
+  "agents": {
+    "research_bot": {
+      "enabled": true,
+      "model": "anthropic/claude-sonnet-4-5",
+      "thinking": "low"
+    },
+    "content_bot": {
+      "enabled": true,
+      "model": "anthropic/claude-sonnet-4-5",
+      "thinking": "low"
+    },
+    "dev_bot": {
+      "enabled": false,
+      "model": "anthropic/claude-sonnet-4-5",
+      "thinking": "medium"
+    }
+  },
+  "content_pipeline": {
+    "youtube_frequency": "weekly",
+    "lead_magnet_frequency": "biweekly",
+    "linkedin_posts": "3_per_week"
+  },
+  "notifications": {
+    "telegram_enabled": true,
+    "notify_on": [
+      "hot_lead_found",
+      "response_received",
+      "meeting_booked",
+      "daily_summary",
+      "weekly_report"
+    ]
+  }
+}

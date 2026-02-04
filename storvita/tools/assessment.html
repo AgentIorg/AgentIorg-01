@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Assessment Calculator | Chris Iorg - CCIE Security</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f4;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .tool-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        h2 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #1e3c72;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        button {
+            background: #e74c3c;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #c0392b;
+        }
+        
+        #results {
+            display: none;
+            background: #f0f8ff;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 2px solid #1e3c72;
+            margin-top: 2rem;
+        }
+        
+        #results.show {
+            display: block;
+        }
+        
+        .result-item {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: white;
+            border-radius: 5px;
+        }
+        
+        .cost-highlight {
+            font-size: 2rem;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #1e3c72;
+            text-decoration: none;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Network Assessment Calculator</h1>
+            <p>Get an instant infrastructure cost estimate</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="tool-card">
+            <h2>Tell Us About Your Organization</h2>
+            <form id="assessmentForm">
+                <div class="form-group">
+                    <label for="employees">Number of Employees:</label>
+                    <select id="employees" required>
+                        <option value="">Select...</option>
+                        <option value="50">1-50</option>
+                        <option value="150">51-150</option>
+                        <option value="400">151-500</option>
+                        <option value="1000">501-1000</option>
+                        <option value="2500">1001-5000</option>
+                        <option value="7500">5000+</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="locations">Number of Locations:</label>
+                    <select id="locations" required>
+                        <option value="">Select...</option>
+                        <option value="1">Single Location</option>
+                        <option value="3">2-5 Locations</option>
+                        <option value="8">6-10 Locations</option>
+                        <option value="15">10+ Locations</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="industry">Industry:</label>
+                    <select id="industry" required>
+                        <option value="">Select...</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="finance">Financial Services</option>
+                        <option value="manufacturing">Manufacturing</option>
+                        <option value="retail">Retail</option>
+                        <option value="education">Education</option>
+                        <option value="tech">Technology</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="security">Security Requirements:</label>
+                    <select id="security" required>
+                        <option value="">Select...</option>
+                        <option value="basic">Basic (Standard firewall)</option>
+                        <option value="advanced">Advanced (Zero-trust, segmentation)</option>
+                        <option value="compliance">Compliance-driven (HIPAA, PCI-DSS)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email (to receive detailed report):</label>
+                    <input type="email" id="email" required>
+                </div>
+                
+                <button type="submit">Calculate My Estimate</button>
+            </form>
+        </div>
+        
+        <div id="results">
+            <h2>Your Infrastructure Estimate</h2>
+            <div class="result-item">
+                <h3>Estimated Investment Range</h3>
+                <p class="cost-highlight" id="costRange"></p>
+            </div>
+            
+            <div class="result-item">
+                <h3>Recommended Solutions</h3>
+                <ul id="recommendations"></ul>
+            </div>
+            
+            <div class="result-item">
+                <h3>Next Steps</h3>
+                <p>A detailed assessment report has been sent to your email. I'll also reach out within 24 hours to discuss your specific requirements.</p>
+                <p><strong>Want to talk sooner?</strong> Schedule a free 15-minute consultation to discuss your infrastructure needs.</p>
+            </div>
+        </div>
+        
+        <a href="/" class="back-link">← Back to Home</a>
+    </div>
+    
+    <script>
+        document.getElementById('assessmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const employees = parseInt(document.getElementById('employees').value);
+            const locations = parseInt(document.getElementById('locations').value);
+            const industry = document.getElementById('industry').value;
+            const security = document.getElementById('security').value;
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            
+            // Calculate estimate
+            let baseCost = employees * 300; // $300 per employee baseline
+            let locationMultiplier = locations * 15000; // $15K per location
+            let securityCost = security === 'basic' ? 20000 : security === 'advanced' ? 50000 : 80000;
+            
+            let totalLow = baseCost + locationMultiplier + securityCost;
+            let totalHigh = totalLow * 1.5;
+            
+            // Display results
+            document.getElementById('costRange').textContent = 
+                `$${(totalLow/1000).toFixed(0)}K - $${(totalHigh/1000).toFixed(0)}K`;
+            
+            // Generate recommendations
+            const recommendations = [];
+            
+            if (employees > 500) {
+                recommendations.push('Enterprise-grade Cisco or Juniper core switching');
+                recommendations.push('High-availability architecture with redundancy');
+            }
+            
+            if (security === 'compliance' || industry === 'healthcare' || industry === 'finance') {
+                recommendations.push('Zero-trust security architecture');
+                recommendations.push('Network segmentation and micro-segmentation');
+                recommendations.push('SIEM and advanced threat detection');
+            }
+            
+            if (locations > 1) {
+                recommendations.push('SD-WAN for multi-site connectivity');
+                recommendations.push('Centralized management and monitoring');
+            }
+            
+            recommendations.push('Enterprise wireless (Cisco, Aruba, or Juniper Mist)');
+            recommendations.push('Modern firewall (Palo Alto or Cisco Firepower)');
+            
+            const recList = document.getElementById('recommendations');
+            recList.innerHTML = '';
+            recommendations.forEach(rec => {
+                const li = document.createElement('li');
+                li.textContent = rec;
+                recList.appendChild(li);
+            });
+            
+            // Show results
+            document.getElementById('results').classList.add('show');
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+            
+            // Send lead data (in real implementation, this would POST to backend)
+            console.log('Lead captured:', { name, email, employees, locations, industry, security, totalLow, totalHigh });
+            
+            // TODO: Integrate with email service or CRM
+        });
+    </script>
+</body>
+</html>

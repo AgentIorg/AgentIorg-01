@@ -1,0 +1,215 @@
+{
+  "verticals": {
+    "healthcare": {
+      "priority": "high",
+      "keywords": ["hospital", "health system", "medical", "healthcare", "clinic"],
+      "decision_maker_titles": [
+        "CIO", "CISO", "VP Infrastructure", "Director IT",
+        "Network Architect", "Security Director"
+      ],
+      "typical_pain_points": [
+        "HIPAA compliance",
+        "Patient data security",
+        "Network reliability (life-critical)",
+        "Legacy system modernization",
+        "Telehealth infrastructure"
+      ]
+    },
+    "finance": {
+      "priority": "high",
+      "keywords": ["bank", "credit union", "financial services", "fintech", "insurance"],
+      "decision_maker_titles": [
+        "CIO", "CISO", "Chief Risk Officer",
+        "VP Technology", "Director Cybersecurity"
+      ],
+      "typical_pain_points": [
+        "PCI compliance",
+        "Fraud prevention",
+        "Zero-trust architecture",
+        "Branch connectivity",
+        "DDoS protection"
+      ]
+    },
+    "technology": {
+      "priority": "high",
+      "keywords": ["software", "saas", "cloud", "AI", "tech company"],
+      "decision_maker_titles": [
+        "CTO", "VP Engineering", "Head of Infrastructure",
+        "Director IT", "Security Engineering Lead"
+      ],
+      "typical_pain_points": [
+        "Rapid scaling",
+        "Multi-cloud connectivity",
+        "API security",
+        "High availability",
+        "Global network performance"
+      ]
+    },
+    "government": {
+      "priority": "medium",
+      "keywords": ["county", "city", "state", "federal", "public sector", "municipal"],
+      "decision_maker_titles": [
+        "CIO", "IT Director", "Network Manager",
+        "Cybersecurity Manager"
+      ],
+      "typical_pain_points": [
+        "Budget constraints",
+        "Aging infrastructure",
+        "Cybersecurity threats",
+        "Citizen services availability",
+        "Multi-site connectivity"
+      ]
+    },
+    "manufacturing": {
+      "priority": "medium",
+      "keywords": ["manufacturing", "industrial", "factory", "production"],
+      "decision_maker_titles": [
+        "CIO", "Director IT", "OT Manager",
+        "Plant Manager", "VP Operations"
+      ],
+      "typical_pain_points": [
+        "OT/IT convergence",
+        "IoT device security",
+        "Production uptime",
+        "Supply chain visibility",
+        "Remote site connectivity"
+      ]
+    },
+    "retail": {
+      "priority": "medium",
+      "keywords": ["retail", "ecommerce", "store", "consumer"],
+      "decision_maker_titles": [
+        "CIO", "VP Technology", "Director IT",
+        "Store Systems Manager"
+      ],
+      "typical_pain_points": [
+        "POS reliability",
+        "In-store wifi",
+        "Inventory systems",
+        "Payment security",
+        "Omnichannel integration"
+      ]
+    },
+    "education": {
+      "priority": "low",
+      "keywords": ["university", "college", "school district", "education"],
+      "decision_maker_titles": [
+        "CIO", "Director IT", "Network Administrator"
+      ],
+      "typical_pain_points": [
+        "Student wifi capacity",
+        "Campus security",
+        "Budget constraints",
+        "Remote learning infrastructure",
+        "Research network performance"
+      ]
+    }
+  },
+  "geography": {
+    "tier_1_seattle_metro": {
+      "priority": "highest",
+      "cities": ["Seattle", "Bellevue", "Redmond", "Tacoma", "Everett", "Renton", "Kent"],
+      "advantage": "In-person meetings possible, existing MultiCare relationship nearby"
+    },
+    "tier_2_pnw": {
+      "priority": "high",
+      "cities": ["Portland", "Vancouver WA", "Spokane", "Boise"],
+      "advantage": "Regional presence, similar market dynamics"
+    },
+    "tier_3_west_coast": {
+      "priority": "medium",
+      "cities": ["San Francisco", "San Jose", "Los Angeles", "San Diego", "Sacramento"],
+      "advantage": "Large tech markets, NWN has west coast presence"
+    },
+    "tier_4_nationwide": {
+      "priority": "low",
+      "cities": "all_us",
+      "advantage": "Scale opportunity, remote engagement model"
+    }
+  },
+  "company_size": {
+    "enterprise": {
+      "employees": "5000+",
+      "priority": "highest",
+      "deal_size_avg": "$500K+",
+      "sales_cycle": "6-12 months"
+    },
+    "mid_market": {
+      "employees": "500-5000",
+      "priority": "high",
+      "deal_size_avg": "$100K-500K",
+      "sales_cycle": "3-6 months"
+    },
+    "smb": {
+      "employees": "50-500",
+      "priority": "low",
+      "deal_size_avg": "$25K-100K",
+      "sales_cycle": "1-3 months"
+    }
+  },
+  "trigger_events": {
+    "critical_urgency": [
+      {
+        "event": "security_breach",
+        "keywords": ["breach", "ransomware", "hacked", "cyberattack"],
+        "timing": "within 7 days",
+        "conversion_rate": "high"
+      },
+      {
+        "event": "datacenter_expansion",
+        "keywords": ["new datacenter", "leased space", "office expansion", "cabling"],
+        "timing": "within 30 days",
+        "conversion_rate": "high",
+        "chris_advantage": "Has cabling crew available for buildouts"
+      },
+      {
+        "event": "new_executive",
+        "keywords": ["new CIO", "new CISO", "appointed", "hired"],
+        "timing": "within 90 days",
+        "conversion_rate": "medium"
+      }
+    ],
+    "medium_urgency": [
+      {
+        "event": "funding_round",
+        "keywords": ["Series A", "Series B", "funding", "raised"],
+        "timing": "within 6 months",
+        "conversion_rate": "medium"
+      },
+      {
+        "event": "merger_acquisition",
+        "keywords": ["acquired", "merged", "integration"],
+        "timing": "within 12 months",
+        "conversion_rate": "medium"
+      }
+    ],
+    "evergreen": [
+      {
+        "event": "technology_refresh",
+        "keywords": ["infrastructure upgrade", "network refresh"],
+        "timing": "ongoing",
+        "conversion_rate": "low"
+      }
+    ]
+  },
+  "differentiation": {
+    "chris_unique_strengths": [
+      "CCIE Security (rare, prestigious)",
+      "MultiCare reference (large healthcare success)",
+      "Cabling crew availability (datacenter buildouts)",
+      "Multi-vendor expertise (Cisco, Aruba, Juniper, Palo Alto)"
+    ],
+    "nwn_strengths": [
+      "Nationwide presence",
+      "Full-stack infrastructure",
+      "Security focus",
+      "Professional services + implementation"
+    ]
+  },
+  "avoid": {
+    "companies": ["ArenaNet"],
+    "reasons": {
+      "ArenaNet": "Chris has history there, potential conflict"
+    }
+  }
+}

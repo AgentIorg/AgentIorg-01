@@ -1,0 +1,37 @@
+# Sensitive data - do not commit
+*.env
+auth-profiles.json
+credentials/
+
+# Email addresses and contact details
+prospects/email_addresses.md
+prospects/contacts_master.md
+
+# Tracking data with PII
+researchbot-tracking.json
+automation/tasks/*.json
+
+# Logs with potentially sensitive info
+memory/*.md
+
+# Temporary files
+*.tmp
+*.log
+*.swp
+*~
+
+# Node modules (if we add JS automation)
+node_modules/
+package-lock.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Compressed files
+*.tar.gz
+*.zip
+
+# Keep structure files but not the data
+!prospects/README.md
+!memory/README.md

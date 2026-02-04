@@ -1,0 +1,122 @@
+{
+  "templates": {
+    "cold_outreach_consultative": {
+      "subject_patterns": [
+        "Network infrastructure at {{company}}",
+        "Security & connectivity for {{company}}",
+        "{{company}}'s network infrastructure"
+      ],
+      "structure": {
+        "greeting": "Hi {{first_name}},",
+        "intro": "Brief intro mentioning CCIE Security credential and NWN",
+        "hook": "Reference to company-specific trigger or challenge",
+        "value_prop": "How we help (Cisco, Aruba, Palo Alto, Juniper solutions)",
+        "soft_cta": "Keep me in your back pocket - use me as a resource",
+        "signature": "Chris Iorg | CCIE Security | Account Executive at NWN"
+      },
+      "tone": "consultative, relationship-first, not pushy",
+      "length": "150-200 words"
+    },
+    "follow_up_value_add": {
+      "subject_patterns": [
+        "Re: {{original_subject}}",
+        "Quick follow-up for {{first_name}}",
+        "Thought this might help - {{company}}"
+      ],
+      "structure": {
+        "greeting": "Hi {{first_name}},",
+        "reference": "Brief mention of original email",
+        "value_add": "Share an insight, article, or resource relevant to their business",
+        "soft_reminder": "Still happy to be a resource when needed",
+        "signature": "Chris Iorg | CCIE Security | NWN"
+      },
+      "tone": "helpful, not desperate",
+      "length": "100-150 words"
+    },
+    "follow_up_last_touch": {
+      "subject_patterns": [
+        "Last note - {{first_name}}",
+        "Final check-in for {{company}}",
+        "One more thing - {{first_name}}"
+      ],
+      "structure": {
+        "greeting": "Hi {{first_name}},",
+        "acknowledge": "Respect their time, acknowledge silence",
+        "final_offer": "Door is always open if priorities change",
+        "signature": "Chris Iorg | CCIE Security | NWN"
+      },
+      "tone": "respectful, graceful exit",
+      "length": "75-100 words"
+    },
+    "reconnection_warm": {
+      "subject_patterns": [
+        "Catching up - {{first_name}}",
+        "Been a while - {{company}} infrastructure",
+        "Quick hello from {{past_connection}}"
+      ],
+      "structure": {
+        "greeting": "Hi {{first_name}},",
+        "connection": "Reference shared past (company, event, mutual contact)",
+        "update": "Brief update on what's new (NWN, capabilities)",
+        "soft_ask": "Would love to reconnect if you're open",
+        "signature": "Chris Iorg | CCIE Security | NWN"
+      },
+      "tone": "warm, genuine, not transactional",
+      "length": "150-200 words"
+    },
+    "hot_lead_urgent": {
+      "subject_patterns": [
+        "{{trigger_event}} - {{company}} infrastructure",
+        "Saw the news about {{company}}",
+        "{{company}}'s {{trigger_event}}"
+      ],
+      "structure": {
+        "greeting": "Hi {{first_name}},",
+        "trigger": "Reference specific news/event (breach, expansion, funding)",
+        "relevance": "Why this matters for their infrastructure",
+        "offer": "How we can help immediately",
+        "urgent_cta": "Happy to chat this week if timing is right",
+        "signature": "Chris Iorg | CCIE Security | NWN"
+      },
+      "tone": "timely, helpful, not opportunistic",
+      "length": "150-200 words"
+    }
+  },
+  "personalization_rules": {
+    "always_use_first_name": true,
+    "research_company_before_sending": true,
+    "reference_specific_trigger": "when_available",
+    "mention_ccie_credential": true,
+    "avoid_generic_flattery": true,
+    "no_buzzwords": ["synergy", "leverage", "circle back", "touch base"],
+    "closing_signature": "Keep me in your back pocket and feel free to use me as a resource in the future!"
+  },
+  "targeting_triggers": {
+    "high_priority": [
+      "security_breach",
+      "ransomware_attack",
+      "datacenter_expansion",
+      "office_relocation",
+      "merger_acquisition",
+      "new_cio_ciso",
+      "funding_round"
+    ],
+    "medium_priority": [
+      "technology_refresh",
+      "cloud_migration",
+      "remote_work_expansion",
+      "compliance_deadline",
+      "job_posting_network_engineer"
+    ],
+    "evergreen": [
+      "annual_budget_planning",
+      "vendor_consolidation",
+      "cost_optimization"
+    ]
+  },
+  "avoid_list": {
+    "companies": ["ArenaNet"],
+    "timing": ["awards_older_than_1_year", "promotions_older_than_1_year"],
+    "anonymize_in_content": ["MultiCare", "client_names"]
+  }
+}

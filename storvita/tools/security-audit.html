@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Audit Tool | Chris Iorg - CCIE Security</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f4;
+        }
+        .container { max-width: 800px; margin: 2rem auto; padding: 0 20px; }
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        .tool-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+        h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        h2 { color: #1e3c72; margin-bottom: 1rem; }
+        .question { margin: 1.5rem 0; padding: 1rem; background: #f9f9f9; border-radius: 5px; }
+        .question label { display: block; margin-bottom: 0.5rem; font-weight: bold; }
+        .options { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .options label { font-weight: normal; }
+        button {
+            background: #e74c3c;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+            margin-top: 1rem;
+        }
+        button:hover { background: #c0392b; }
+        #results {
+            display: none;
+            background: #f0f8ff;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        #results.show { display: block; }
+        .score {
+            font-size: 4rem;
+            text-align: center;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        .score.good { color: #27ae60; }
+        .score.warning { color: #f39c12; }
+        .score.danger { color: #e74c3c; }
+        .recommendation {
+            background: white;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+            border-left: 4px solid #e74c3c;
+        }
+        input[type="email"], input[type="text"] {
+            width: 100%;
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #1e3c72;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Security Audit Tool</h1>
+            <p>Score your security posture in 2 minutes</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="tool-card">
+            <h2>Rate Your Current Security</h2>
+            <form id="auditForm">
+                
+                <div class="question">
+                    <label>1. Do you have network segmentation (VLANs, micro-segmentation)?</label>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="2" required> Yes, comprehensive</label>
+                        <label><input type="radio" name="q1" value="1"> Partial</label>
+                        <label><input type="radio" name="q1" value="0"> No, flat network</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>2. How often do you update firewall/network device firmware?</label>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="2" required> Quarterly or better</label>
+                        <label><input type="radio" name="q2" value="1"> Annually</label>
+                        <label><input type="radio" name="q2" value="0"> Rarely/never</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>3. Do you have intrusion detection/prevention (IDS/IPS)?</label>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="2" required> Yes, monitored 24/7</label>
+                        <label><input type="radio" name="q3" value="1"> Yes, but not monitored</label>
+                        <label><input type="radio" name="q3" value="0"> No</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>4. Multi-factor authentication (MFA) for admin access?</label>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="2" required> Yes, enforced</label>
+                        <label><input type="radio" name="q4" value="1"> Optional</label>
+                        <label><input type="radio" name="q4" value="0"> No MFA</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>5. Separate wireless networks for guests/IoT/corporate?</label>
+                    <div class="options">
+                        <label><input type="radio" name="q5" value="2" required> Yes, fully segmented</label>
+                        <label><input type="radio" name="q5" value="1"> Partial separation</label>
+                        <label><input type="radio" name="q5" value="0"> Single network</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>6. Do you have a documented disaster recovery plan?</label>
+                    <div class="options">
+                        <label><input type="radio" name="q6" value="2" required> Yes, tested regularly</label>
+                        <label><input type="radio" name="q6" value="1"> Yes, but untested</label>
+                        <label><input type="radio" name="q6" value="0"> No plan</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>7. Logging and monitoring of network activity?</label>
+                    <div class="options">
+                        <label><input type="radio" name="q7" value="2" required> Comprehensive</label>
+                        <label><input type="radio" name="q7" value="1"> Basic logging</label>
+                        <label><input type="radio" name="q7" value="0"> Minimal/none</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>8. Role-based access control (RBAC) for system access?</label>
+                    <div class="options">
+                        <label><input type="radio" name="q8" value="2" required> Yes, strictly enforced</label>
+                        <label><input type="radio" name="q8" value="1"> Partially implemented</label>
+                        <label><input type="radio" name="q8" value="0"> No RBAC</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>9. Regular security assessments/penetration testing?</label>
+                    <div class="options">
+                        <label><input type="radio" name="q9" value="2" required> Annually or more</label>
+                        <label><input type="radio" name="q9" value="1"> Occasionally</label>
+                        <label><input type="radio" name="q9" value="0"> Never</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>10. Backup and recovery tested within last 6 months?</label>
+                    <div class="options">
+                        <label><input type="radio" name="q10" value="2" required> Yes, successful</label>
+                        <label><input type="radio" name="q10" value="1"> Tested but issues found</label>
+                        <label><input type="radio" name="q10" value="0"> Not tested</label>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 2rem;">Get Your Detailed Report</h3>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="company" placeholder="Company (Optional)">
+
+                <button type="submit">Get My Security Score</button>
+            </form>
+        </div>
+
+        <div id="results">
+            <h2>Your Security Score</h2>
+            <div class="score" id="scoreDisplay"></div>
+            <div id="verdict"></div>
+            <div id="recommendations"></div>
+            <p style="margin-top: 2rem;"><strong>Want a deeper assessment?</strong> I'll send a detailed report to your email and can schedule a free 15-minute consultation to review your specific security posture.</p>
+        </div>
+
+        <a href="/" class="back-link">← Back to Home</a>
+    </div>
+
+    <script>
+        document.getElementById('auditForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let score = 0;
+            for (let i = 1; i <= 10; i++) {
+                const q = document.querySelector(`input[name="q${i}"]:checked`);
+                if (q) score += parseInt(q.value);
+            }
+            
+            const maxScore = 20;
+            const percentage = Math.round((score / maxScore) * 100);
+            
+            const scoreDisplay = document.getElementById('scoreDisplay');
+            const verdict = document.getElementById('verdict');
+            const recommendations = document.getElementById('recommendations');
+            
+            scoreDisplay.textContent = percentage + '%';
+            
+            if (percentage >= 80) {
+                scoreDisplay.className = 'score good';
+                verdict.innerHTML = '<h3>✅ Strong Security Posture</h3><p>Your organization has solid security foundations. Focus on maintaining and continuously improving.</p>';
+            } else if (percentage >= 50) {
+                scoreDisplay.className = 'score warning';
+                verdict.innerHTML = '<h3>⚠️ Moderate Security</h3><p>You have basic security in place, but significant gaps remain. Priority improvements needed.</p>';
+            } else {
+                scoreDisplay.className = 'score danger';
+                verdict.innerHTML = '<h3>🚨 Critical Security Gaps</h3><p>Your organization is at high risk. Immediate action required to avoid costly breaches.</p>';
+            }
+            
+            // Generate recommendations
+            let recs = [];
+            if (document.querySelector('input[name="q1"]:checked').value === '0') {
+                recs.push('<div class="recommendation"><strong>Network Segmentation:</strong> Implement VLANs and micro-segmentation immediately. Flat networks allow breaches to spread unchecked.</div>');
+            }
+            if (document.querySelector('input[name="q2"]:checked').value === '0') {
+                recs.push('<div class="recommendation"><strong>Firmware Updates:</strong> Establish quarterly patching schedule. Known vulnerabilities are low-hanging fruit for attackers.</div>');
+            }
+            if (document.querySelector('input[name="q4"]:checked').value === '0') {
+                recs.push('<div class="recommendation"><strong>Multi-Factor Authentication:</strong> Enforce MFA for all administrative access. This alone prevents 99% of credential-based attacks.</div>');
+            }
+            if (document.querySelector('input[name="q6"]:checked').value === '0') {
+                recs.push('<div class="recommendation"><strong>Disaster Recovery:</strong> Document and test DR procedures. Downtime costs thousands per minute.</div>');
+            }
+            
+            if (recs.length === 0) {
+                recs.push('<div class="recommendation"><strong>Continuous Improvement:</strong> Maintain current practices and consider advanced security controls like SIEM, EDR, and zero-trust architecture.</div>');
+            }
+            
+            recommendations.innerHTML = '<h3>Priority Recommendations:</h3>' + recs.join('');
+            
+            document.getElementById('results').classList.add('show');
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+            
+            // Capture lead data
+            const name = document.querySelector('input[name="name"]').value;
+            const email = document.querySelector('input[name="email"]').value;
+            console.log('Lead captured:', { name, email, score, percentage });
+        });
+    </script>
+</body>
+</html>
