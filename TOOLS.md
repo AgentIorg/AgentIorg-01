@@ -38,3 +38,8 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 ---
 
 Add whatever helps you do your job. This is your cheat sheet.
+
+### Chris's Voice Clone (ElevenLabs)
+- Voice ID: `p5IxvitSK8YqPrQEgDUC`
+- Created: Feb 5, 2026
+- Use for: All "Chris Iorg" branded content
