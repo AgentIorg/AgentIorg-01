@@ -1,0 +1,15 @@
+Your WiFi network is probably your biggest security vulnerability. I'm Chris Iorg, a CCIE Security engineer, and here are 5 mistakes that get companies hacked.
+
+Mistake one: Same network for everything. Guest WiFi, corporate devices, IoT sensors, security cameras - all on the same network. One compromised camera and an attacker has a path to your payroll system. You need separate SSIDs with proper segmentation.
+
+Mistake two: Still using WPA2 in 2026. If you're on WPA2-Personal, you're running security from 2004. WPA3 has been available for years. The crack time difference is measured in centuries, not hours. Upgrade.
+
+Mistake three: Weak password policies. Your WiFi password is probably written on a whiteboard somewhere. And it hasn't changed since 2019. Use 802.1X with certificate-based authentication. Every device gets its own credentials.
+
+Mistake four: No monitoring. Do you know when someone connects to your WiFi? Most companies have no wireless intrusion detection. Rogue access points appear and stay for months undetected.
+
+Mistake five: Default configurations. Admin interface on default port. Default SNMP strings. No rate limiting. These defaults make you an easy target.
+
+The fix? Enterprise-grade access points. WPA3. 802.1X authentication. Network segmentation. It sounds expensive, but a proper wireless design can be done for under 50K at most organizations. It's cheaper than a breach.
+
+If you're not sure about your wireless security, I offer free 15-minute assessments. Link in the description. Like and subscribe for more security content.

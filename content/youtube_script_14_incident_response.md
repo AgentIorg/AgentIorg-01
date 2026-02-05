@@ -1,0 +1,23 @@
+# Video 14: Building an Incident Response Plan That Works
+
+## Script
+
+You will get breached. The question is whether you'll respond in hours or weeks. A good incident response plan is the difference between a bad day and a company-ending event.
+
+Step one: Know your team. Who gets called at 2 AM? Not their title — their actual phone number. Document primary and backup contacts for IT, security, legal, PR, and executive leadership. Test that list quarterly.
+
+Step two: Define what's an incident. Is a phishing email an incident? What about a suspicious login from another country? Clear definitions prevent both under-reaction and panic. Severity levels matter.
+
+Step three: Establish communication channels. When your email is compromised, how do you communicate? Out-of-band channels — Signal groups, phone trees, separate email domains — need to be set up before you need them.
+
+Step four: Document your playbooks. Ransomware has a different response than data theft. Create step-by-step guides for common scenarios. What to preserve, who to notify, what to isolate. Don't figure this out during the crisis.
+
+Step five: Know your legal obligations. Breach notification laws vary by state, by industry, by data type. HIPAA, GDPR, state privacy laws — know your timelines before the clock starts.
+
+Step six: Practice. Tabletop exercises aren't optional. Walk through scenarios. Find the gaps. Update the plan. A plan that's never tested is just documentation.
+
+Step seven: Post-incident review. Every incident is a learning opportunity. What worked? What didn't? Update procedures while memories are fresh.
+
+The best incident response plans are boring because they're thorough. Boring saves companies.
+
+Link in description if you need help building yours.

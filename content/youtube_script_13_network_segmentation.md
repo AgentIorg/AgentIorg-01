@@ -1,0 +1,21 @@
+# Video 13: Network Segmentation Done Right
+
+## Script
+
+Flat networks are a gift to attackers. Once they're in, they can reach everything. Network segmentation limits the blast radius — but most companies do it wrong.
+
+The old model: VLANs. Separate your departments. Finance on VLAN 10, HR on VLAN 20. Problem is, VLANs alone don't stop lateral movement. You need firewall rules between them, and those rules need to actually enforce something.
+
+Mistake one: Segment by org chart, not by risk. Marketing and Finance might sit on different VLANs, but both can reach the database server. The real question is: who actually needs access to what?
+
+Mistake two: Too few segments. Three VLANs for a thousand devices isn't segmentation — it's theater. You need granularity. Production separate from development. User devices separate from servers.
+
+Mistake three: No east-west inspection. You've got great perimeter security, but once traffic is inside, it flows freely. Modern attacks move laterally. If you're not inspecting internal traffic, you're exposed.
+
+The right approach: Start with your crown jewels. What data absolutely cannot be compromised? Segment that first. Then work outward. Database tier, application tier, user tier.
+
+Micro-segmentation takes it further. Instead of network-based rules, you apply policies at the workload level. VMware NSX, Cisco ACI, Illumio — they let you create software-defined segments that follow the workload.
+
+Zero trust assumes the network is already compromised. Segmentation limits what attackers can reach when — not if — they get in.
+
+Need help designing segments? Link in description.

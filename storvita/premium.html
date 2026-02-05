@@ -3,321 +3,331 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Network Assessments | Chris Iorg CCIE Security</title>
-    <meta name="description" content="Get expert network security assessments and detailed infrastructure recommendations from a Cisco CCIE Security engineer.">
+    <title>Premium Assessments | Chris Iorg CCIE Security</title>
+    <meta name="description" content="Expert network security assessments from a CCIE Security engineer. Get detailed recommendations starting at $49.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://js.stripe.com/v3/"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --primary: #00d9ff;
+            --secondary: #ff3366;
+            --success: #00ff88;
+            --dark: #0a0a1a;
+            --darker: #050510;
+            --light: #ffffff;
+            --gray: #888;
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Inter', sans-serif;
+            background: var(--darker);
+            color: var(--light);
             line-height: 1.6;
-            color: #333;
-            background: #f4f4f4;
         }
         
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Nav */
+        nav {
+            background: rgba(10, 10, 26, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(0, 217, 255, 0.1);
         }
         
-        header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            padding: 2rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
-        header h1 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
         }
         
+        .logo span { color: var(--light); }
+        
+        .back-link {
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .back-link:hover { color: var(--primary); }
+        
+        /* Hero */
         .hero {
-            background: white;
-            padding: 3rem 0;
+            padding: 4rem 0;
             text-align: center;
+            background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
         }
         
-        .hero h2 {
-            font-size: 2.5rem;
-            color: #1e3c72;
+        .hero h1 {
+            font-size: 3rem;
             margin-bottom: 1rem;
         }
         
         .hero p {
-            font-size: 1.2rem;
-            color: #666;
-            max-width: 800px;
-            margin: 0 auto 2rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
         }
         
+        /* Pricing Cards */
         .pricing {
             padding: 4rem 0;
-            background: #f9f9f9;
-        }
-        
-        .pricing h2 {
-            text-align: center;
-            font-size: 2rem;
-            color: #1e3c72;
-            margin-bottom: 3rem;
         }
         
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
             max-width: 900px;
             margin: 0 auto;
         }
         
         .pricing-card {
-            background: white;
-            border-radius: 10px;
-            padding: 2rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        
-        .pricing-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .pricing-card.featured {
-            border: 3px solid #e74c3c;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s;
             position: relative;
         }
         
-        .pricing-card.featured::before {
-            content: "MOST POPULAR";
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #e74c3c;
-            color: white;
-            padding: 5px 20px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: bold;
+        .pricing-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 217, 255, 0.15);
         }
         
-        .pricing-card h3 {
-            font-size: 1.8rem;
-            color: #1e3c72;
-            margin-bottom: 1rem;
+        .pricing-card.featured {
+            border-color: var(--success);
+            background: rgba(0, 255, 136, 0.05);
+        }
+        
+        .badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--success);
+            color: var(--dark);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+        
+        .pricing-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
         }
         
         .price {
-            font-size: 3rem;
-            color: #e74c3c;
-            font-weight: bold;
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--primary);
             margin: 1rem 0;
         }
         
-        .price-note {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 1.5rem;
+        .price span {
+            font-size: 1rem;
+            color: var(--gray);
         }
         
-        .features {
+        .pricing-card ul {
             list-style: none;
             margin: 2rem 0;
+            text-align: left;
         }
         
-        .features li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #eee;
+        .pricing-card li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
         
-        .features li:before {
-            content: "✓ ";
-            color: #27ae60;
+        .pricing-card li::before {
+            content: '✓';
+            color: var(--success);
             font-weight: bold;
-            margin-right: 0.5rem;
         }
         
-        .buy-button {
+        .btn {
             display: block;
             width: 100%;
-            background: #e74c3c;
-            color: white;
-            padding: 1rem 2rem;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            transition: background 0.3s;
+            padding: 1rem;
             border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
             cursor: pointer;
+            transition: all 0.3s;
         }
         
-        .buy-button:hover {
-            background: #c0392b;
+        .btn-primary {
+            background: var(--primary);
+            color: var(--dark);
         }
         
-        .testimonials {
-            background: white;
+        .btn-primary:hover {
+            background: var(--light);
+            transform: translateY(-2px);
+        }
+        
+        .btn-success {
+            background: var(--success);
+            color: var(--dark);
+        }
+        
+        .btn-success:hover {
+            background: var(--light);
+        }
+        
+        /* What's Included */
+        .included {
             padding: 4rem 0;
+            background: var(--dark);
         }
         
-        .testimonials h2 {
+        .included h2 {
             text-align: center;
             font-size: 2rem;
-            color: #1e3c72;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
         
-        .testimonial {
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            padding: 2rem;
-            background: #f9f9f9;
-            border-left: 4px solid #e74c3c;
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
         }
         
-        .testimonial p {
-            font-style: italic;
-            margin-bottom: 1rem;
+        .included-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 1.5rem;
         }
         
-        .testimonial .author {
-            font-weight: bold;
-            color: #1e3c72;
+        .included-item h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
         }
         
-        .guarantee {
-            background: #1e3c72;
-            color: white;
-            padding: 3rem 0;
-            text-align: center;
+        .included-item p {
+            color: var(--gray);
+            font-size: 0.9rem;
         }
         
-        .guarantee h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-        
-        .guarantee p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
+        /* Footer */
         footer {
-            background: #2c3e50;
-            color: white;
             padding: 2rem 0;
             text-align: center;
+            border-top: 1px solid rgba(0, 217, 255, 0.1);
         }
+        
+        footer a { color: var(--primary); text-decoration: none; }
+        footer p { color: var(--gray); }
     </style>
 </head>
 <body>
-    <header>
+    <nav>
         <div class="container">
-            <h1>Premium Network Security Assessments</h1>
-            <p>Expert analysis from a Cisco CCIE Security engineer</p>
+            <a href="index.html" class="logo">CHRIS <span>IORG</span></a>
+            <a href="index.html" class="back-link">← Back to Home</a>
         </div>
-    </header>
+    </nav>
 
     <section class="hero">
         <div class="container">
-            <h2>Get Expert Network Security Insights</h2>
-            <p>Stop guessing about your network security. Get detailed, actionable recommendations from a CCIE Security engineer with years of enterprise experience.</p>
+            <h1>Premium Assessments</h1>
+            <p>Get expert analysis of your network infrastructure from a CCIE Security engineer. Detailed reports with actionable recommendations.</p>
         </div>
     </section>
 
     <section class="pricing">
         <div class="container">
-            <h2>Choose Your Assessment</h2>
             <div class="pricing-grid">
                 <div class="pricing-card">
-                    <h3>Network Assessment</h3>
-                    <div class="price">$49</div>
-                    <p class="price-note">One-time payment</p>
-                    <ul class="features">
-                        <li>Detailed infrastructure analysis</li>
-                        <li>Network segmentation review</li>
-                        <li>Security posture assessment</li>
-                        <li>Vendor recommendations</li>
-                        <li>ROI calculations</li>
-                        <li>Prioritized action plan</li>
-                        <li>30-minute follow-up call</li>
+                    <h2>Network Assessment</h2>
+                    <div class="price">$49 <span>one-time</span></div>
+                    <ul>
+                        <li>Network architecture review</li>
+                        <li>Performance analysis</li>
+                        <li>Segmentation evaluation</li>
+                        <li>Wireless coverage assessment</li>
+                        <li>Detailed PDF report</li>
+                        <li>15-min follow-up call</li>
                     </ul>
-                    <button class="buy-button" onclick="buyProduct('price_network_assessment', 49)">
-                        Get Network Assessment
-                    </button>
+                    <button class="btn btn-primary" onclick="checkout('network')">Get Started</button>
                 </div>
-
+                
                 <div class="pricing-card featured">
-                    <h3>Security Audit</h3>
-                    <div class="price">$99</div>
-                    <p class="price-note">One-time payment</p>
-                    <ul class="features">
+                    <span class="badge">MOST POPULAR</span>
+                    <h2>Security Audit</h2>
+                    <div class="price">$99 <span>one-time</span></div>
+                    <ul>
                         <li>Everything in Network Assessment</li>
-                        <li>10-point security audit</li>
-                        <li>Vulnerability analysis</li>
-                        <li>Compliance gap assessment</li>
-                        <li>Firewall rule review</li>
-                        <li>Wireless security evaluation</li>
-                        <li>Disaster recovery analysis</li>
-                        <li>Detailed remediation guide</li>
-                        <li>60-minute strategy call</li>
+                        <li>Firewall rule analysis</li>
+                        <li>Vulnerability assessment</li>
+                        <li>Compliance review (HIPAA/PCI)</li>
+                        <li>Risk prioritization matrix</li>
+                        <li>30-min strategy call</li>
                     </ul>
-                    <button class="buy-button" onclick="buyProduct('price_security_audit', 99)">
-                        Get Security Audit
-                    </button>
+                    <button class="btn btn-success" onclick="checkout('security')">Get Started</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="testimonials">
+    <section class="included">
         <div class="container">
-            <h2>What IT Leaders Say</h2>
-            <div class="testimonial">
-                <p>"Chris identified three critical vulnerabilities we didn't even know existed. His recommendations saved us from a potential breach."</p>
-                <p class="author">— IT Director, Healthcare Provider</p>
+            <h2>What's Included</h2>
+            <div class="included-grid">
+                <div class="included-item">
+                    <h3>📋 Intake Form</h3>
+                    <p>Quick questionnaire about your current infrastructure and challenges.</p>
+                </div>
+                <div class="included-item">
+                    <h3>📊 Expert Analysis</h3>
+                    <p>CCIE-level review of your network architecture and security posture.</p>
+                </div>
+                <div class="included-item">
+                    <h3>📄 Detailed Report</h3>
+                    <p>Professional PDF with findings, recommendations, and priority actions.</p>
+                </div>
+                <div class="included-item">
+                    <h3>📞 Follow-up Call</h3>
+                    <p>One-on-one video call to discuss findings and answer questions.</p>
+                </div>
             </div>
-            <div class="testimonial">
-                <p>"The ROI analysis alone was worth the investment. We saved $200K by following his vendor recommendations."</p>
-                <p class="author">— CIO, Regional Bank</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="guarantee">
-        <div class="container">
-            <h2>100% Satisfaction Guarantee</h2>
-            <p>If you're not completely satisfied with your assessment, I'll refund your money. No questions asked.</p>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Chris Iorg | CCIE Security</p>
-            <p><a href="/" style="color: white;">Back to Home</a></p>
+            <p>Questions? <a href="https://calendly.com/chris-iorg">Book a free 15-min call</a></p>
+            <p style="margin-top: 1rem;">© 2026 Chris Iorg | CCIE Security</p>
         </div>
     </footer>
 
     <script>
-        // Initialize Stripe
-        const stripe = Stripe('pk_test_51Sx1j5DIeIX8Pk5cdQpasstpauMRSPsG7DF174oYDRhqdPc0dBd9aZA6Mwxc74WLeIgw9HDfboCLI0yfPMJRqBKe002AvCTU8L');
-
-        async function buyProduct(priceId, amount) {
-            // This is a simplified version - in production, you'd create a Checkout Session on the server
-            alert(`Payment processing coming soon! You selected the $${amount} assessment. Email chris@storvita.com to get started.`);
-            
-            // TODO: Implement full Stripe Checkout integration with server-side session creation
-            // For now, directing to email contact
+        // Stripe checkout - using test keys for now
+        const stripe = Stripe('pk_test_51Sx1ixDJ6FCwEfpB4E7R9yHN4Y2Y3q2Y2Y3q2Y2');
+        
+        function checkout(product) {
+            // In production, this would redirect to Stripe Checkout
+            // For now, redirect to Calendly for manual processing
+            alert('Redirecting to booking page. Payment will be processed manually for now.');
+            window.location.href = 'https://calendly.com/chris-iorg';
         }
     </script>
 </body>

@@ -1,0 +1,13 @@
+Your screens just went dark. Ransom note pops up. The clock is ticking. What do you do in the first 60 minutes? These decisions will determine whether you recover... or whether you're done.
+
+First: ISOLATE. Don't shut down infected systems — you'll lose volatile memory that forensics needs. Instead, disconnect from the network. Pull ethernet cables. Disable WiFi. Stop the spread.
+
+Second: PRESERVE. Take screenshots of ransom notes. Document everything. Note the exact time of discovery. This evidence matters for law enforcement and cyber insurance claims.
+
+Third: ASSESS. What's encrypted? What's not? Check your backups — are they offline or were they connected? Attackers target backups first. If your backups are clean, you have options.
+
+Fourth: COMMUNICATE. Notify your incident response team, cyber insurance carrier, and legal counsel. Do NOT contact the attackers directly. Do NOT pay without expert guidance — you might pay and still not get your data back.
+
+Fifth: CONTAIN. Identify patient zero. How did they get in? Phishing? Exposed RDP? Unpatched vulnerability? Until you know, your network isn't safe even after recovery.
+
+The best ransomware response happens before the attack — with proper segmentation, offline backups, and tested recovery plans. If you need help building that resilience, link's in the description.

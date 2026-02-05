@@ -1,0 +1,13 @@
+Your firewall might be giving you a false sense of security. I've audited hundreds of enterprise firewalls, and I see the same critical mistakes over and over. Here are five that could be leaving your network wide open.
+
+Number one: "Any-any" rules. You created a temporary rule to troubleshoot something six months ago... and it's still there. These forgotten rules are like leaving your front door unlocked. Audit your ruleset quarterly, minimum.
+
+Number two: No egress filtering. Everyone filters inbound traffic, but what about outbound? If malware gets in, it needs to call home. Egress filtering can stop data exfiltration and command-and-control traffic.
+
+Number three: Disabled logging. "It's too noisy" or "it fills up the drives." I get it. But when you're investigating a breach, those logs are gold. Set up proper log management and keep at least 90 days.
+
+Number four: Running outdated firmware. That firewall running software from 2019? It has known vulnerabilities with public exploits. Patch your firewalls like you patch your servers.
+
+Number five: No segmentation behind the firewall. Once attackers get past the perimeter, they shouldn't have free reign. Micro-segmentation and internal firewalls limit lateral movement.
+
+If any of these hit close to home, you're not alone. Drop a comment with your biggest firewall challenge. And subscribe for more security insights from someone who's seen it all.

@@ -1,0 +1,19 @@
+When was your last network security audit? If it was more than 6 months ago, it's already outdated. I'm Chris Iorg, a CCIE Security engineer, and here are 7 things most audits miss in 2026.
+
+Most network audits are stuck in 2019. They check firewalls, antivirus, and password policies. That's table stakes. The threat landscape has evolved.
+
+Number one: Cloud configuration. Are your AWS or Azure security groups properly locked down? I've seen S3 buckets wide open at Fortune 500 companies. Cloud misconfigurations are now the number one cause of breaches.
+
+Number two: API security. How many APIs does your organization expose? Most companies don't know. APIs are the new attack surface.
+
+Number three: Identity and access management. Who has admin access? When did you last review it? I guarantee you have former employees still in your Active Directory.
+
+Number four: Lateral movement paths. If an attacker gets on one workstation, can they reach your domain controller? Most networks allow unrestricted lateral movement.
+
+Number five: Supply chain security. What vendors have access to your network? VPN credentials for an HVAC company led to the Target breach. Who has keys to your kingdom?
+
+Number six: Backup and recovery testing. When did you last actually TEST a restore? 42% of backup restores fail when you need them.
+
+Number seven: Incident response plan. Do you have a plan? Can you reach your team at 2 AM on a Saturday?
+
+If you can't answer these questions, your audit is outdated. I offer free 15-minute network assessments. Link in the description. Like and subscribe for more security insights.

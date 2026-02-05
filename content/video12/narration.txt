@@ -1,0 +1,17 @@
+DNS is the most overlooked attack vector in enterprise security. Every device on your network makes DNS queries. And most companies have zero visibility into what those queries are.
+
+Here's why DNS matters: Malware needs to phone home. Phishing sites need domain resolution. Data exfiltration often tunnels through DNS. If you're not monitoring DNS, you're flying blind.
+
+Threat one: DNS tunneling. Attackers encode data in DNS queries and responses. Your firewall sees normal DNS traffic while gigabytes of data walk out the door. It's slow but nearly invisible.
+
+Threat two: Domain generation algorithms. Modern malware doesn't hardcode command and control servers. It generates random-looking domains daily. By the time you block one, there are a hundred more.
+
+Threat three: Lookalike domains. Attacker registers microsoftdotcom with a zero, or amazom dot com. Your users type it, DNS resolves it, and they're on a phishing site. Traditional security doesn't catch this.
+
+Solution one: DNS filtering. Services like Cisco Umbrella, Cloudflare Gateway, or Palo Alto DNS Security block known-bad domains before the connection happens. It's your first line of defense.
+
+Solution two: DNS logging and analysis. Log every DNS query. Look for anomalies: high query volumes, queries to newly registered domains, suspicious TXT records. This is where you catch the tunneling.
+
+Solution three: Encrypted DNS with control. DNS over HTTPS is great for privacy, but terrible for security if you can't inspect it. Deploy enterprise DoH with your own resolvers.
+
+DNS security isn't optional anymore. If you're not watching DNS, attackers know it. Link in description for a DNS security assessment.
