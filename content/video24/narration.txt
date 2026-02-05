@@ -1,0 +1,19 @@
+Admin accounts are the keys to your kingdom. And most companies manage them terribly. Here's privileged access management done right.
+
+The problem: Your domain admin password is in someone's head. Or worse, in a spreadsheet. Service accounts have passwords that haven't changed in years. When someone leaves, their access lingers.
+
+Principle one: Least privilege. Admins don't need admin rights all day. Just-in-time access grants elevated permissions only when needed, then revokes them automatically.
+
+Principle two: No standing privileges. Zero standing admin accounts. Request, approve, use, revoke. Every privileged session is intentional and auditable.
+
+Principle three: Password vaulting. Nobody knows the admin password. They check it out from a vault, use it once, and the vault rotates it automatically. CyberArk, BeyondTrust, Delinea — pick your tool.
+
+Principle four: Session monitoring. Watch what admins do. Record sessions. Flag suspicious activity. If you can't see it, you can't stop it.
+
+Principle five: Multi-factor everywhere. Admin access without MFA is inexcusable. Hardware tokens are best. Authenticator apps at minimum. SMS if you must.
+
+Principle six: Emergency access procedures. When the vault is down at 3 AM, how do you get in? Break-glass procedures should be documented, tested, and audited.
+
+Attackers don't hack in anymore. They log in with stolen credentials. Privileged access management makes that path much harder.
+
+Need PAM help? Link in description.

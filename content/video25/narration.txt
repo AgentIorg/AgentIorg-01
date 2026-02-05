@@ -1,0 +1,21 @@
+Security awareness training doesn't work. At least not the way most companies do it. Here's how to actually change behavior.
+
+The old model: Annual compliance training. Employees click through slides, pass a quiz, forget everything. Check the box, move on. Nothing changes.
+
+Why it fails: Humans don't learn from slides. They learn from experience. One phishing test teaches more than an hour of training. People remember what they clicked on.
+
+Better approach one: Frequent, short training. Five minutes monthly beats one hour annually. Micro-learning sticks. People have short attention spans — work with it.
+
+Better approach two: Simulated attacks. Phishing simulations, pretexting calls, USB drops. Safe failures that teach real lessons. Not as gotcha punishments — as learning opportunities.
+
+Better approach three: Role-based content. Your finance team needs training on BEC attacks. Your developers need secure coding. Generic training wastes everyone's time.
+
+Better approach four: Positive reinforcement. Reward reporting. Thank people who catch phishing. Build a culture where asking "is this suspicious?" is encouraged, not mocked.
+
+Better approach five: Measure outcomes, not completions. Completion rates are vanity metrics. Measure phishing click rates, incident reporting, secure behavior changes. What actually changed?
+
+Better approach six: Make it easy to do the right thing. Complex password policies lead to sticky notes. Hard-to-use secure tools lead to shadow IT. Security should enable, not frustrate.
+
+Humans aren't the weakest link — untrained humans are. Invest in making them your first line of defense.
+
+Need help building security culture? Link in description.

@@ -1,0 +1,17 @@
+You can't protect what you can't see. Network monitoring is the foundation of security — and most companies do it badly. Here's what actually matters.
+
+Level one: Flow data. NetFlow, sFlow, IPFIX — metadata about every connection. Source, destination, ports, bytes transferred. You can't inspect every packet, but you can see every conversation.
+
+Level two: Packet capture. When you need to dig deeper, full packet capture tells the whole story. Strategic tap points at network boundaries, not everywhere. Storage is expensive — capture smart.
+
+Level three: Application visibility. Port 443 doesn't mean "safe web traffic." You need to see what applications are actually running. Next-gen firewalls and NDR solutions decode protocols and identify applications.
+
+Level four: Encrypted traffic analysis. Most traffic is encrypted now. You can't always decrypt it, but you can analyze patterns. JA3 fingerprints, certificate metadata, connection behavior — encrypted doesn't mean invisible.
+
+Level five: Baseline and anomaly detection. What's normal for your network? That's the baseline. Deviations are interesting. A server suddenly talking to a new country at 3 AM — that's worth investigating.
+
+The tools: Zeek for deep packet analysis. Darktrace, Vectra, or ExtraHop for AI-driven NDR. Elastic or Splunk for flow analysis. Layer them based on risk.
+
+Visibility isn't optional. Attackers live on your network for months before detection. The only way to find them faster is to watch everything.
+
+Need help building network visibility? Link in description.

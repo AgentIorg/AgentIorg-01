@@ -1,0 +1,19 @@
+Moving to the cloud doesn't mean your security problems go away — they change. Here are the security mistakes I see in every cloud migration.
+
+Mistake one: Lift and shift without redesign. You took your on-prem architecture and moved it to AWS. Now you have the same vulnerabilities, plus new cloud-specific risks. Migration is an opportunity to redesign.
+
+Mistake two: Ignoring the shared responsibility model. AWS secures the infrastructure. You secure what you put on it. Misconfigured S3 buckets, exposed databases, overprivileged IAM roles — those are your problems.
+
+Mistake three: No visibility into cloud assets. Your security team can't secure what they don't know exists. Shadow IT creates cloud accounts you don't see. Asset inventory must include cloud resources.
+
+Mistake four: Flat cloud networks. VPCs without proper segmentation. Security groups with 0.0.0.0/0 rules. Just because it's cloud doesn't mean networking basics don't apply.
+
+Mistake five: Weak identity management. Cloud is identity-centric. IAM policies that grant admin everywhere. Service accounts with excessive permissions. Access keys that never rotate. This is where breaches start.
+
+Mistake six: Insufficient logging. CloudTrail should be on everywhere. VPC flow logs should be captured. If you're not logging, you can't detect or investigate.
+
+The right approach: Cloud security posture management — CSPM. Tools like Prisma Cloud, Wiz, or native services that continuously scan for misconfigurations. Automate the detection of drift.
+
+Cloud security isn't harder — it's different. Learn the new model before you migrate.
+
+Need cloud security help? Link in description.

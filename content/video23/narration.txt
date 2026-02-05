@@ -1,0 +1,19 @@
+Your vendor's breach is your breach. Third-party risk is how major attacks happen. Here's how to actually assess vendor security.
+
+The problem: You do security questionnaires. Vendors check all the boxes. Then they get breached and take your data with them. Questionnaires measure intent, not reality.
+
+Better approach one: Request evidence. Don't just ask "do you encrypt data at rest?" Ask for their encryption policy, key management procedures, and audit results. Trust but verify.
+
+Better approach two: Check their security ratings. BitSight, SecurityScorecard, RiskRecon — these services continuously monitor vendor security posture. Low ratings mean higher risk.
+
+Better approach three: Review their SOC 2 report. If they have one, actually read it. Look at the testing procedures, exceptions noted, and management responses. SOC 2 Type 2 covers a period of time, not just a point in time.
+
+Better approach four: Understand their subprocessors. Your vendor uses vendors. AWS, Salesforce, payment processors. Their security is part of your chain. Know who has your data.
+
+Better approach five: Define contractual requirements. Security SLAs, breach notification timelines, audit rights, termination clauses. Get it in writing before you sign.
+
+Better approach six: Continuous monitoring. Annual assessments aren't enough. Vendors change. Subscribe to alerts for your critical vendors. Know when they make news.
+
+The reality: You can't eliminate third-party risk. You can understand it, manage it, and make informed decisions. Surprises are what kill you.
+
+Need help with vendor risk? Link in description.
