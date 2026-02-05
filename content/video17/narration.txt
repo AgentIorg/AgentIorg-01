@@ -1,0 +1,19 @@
+Password policies haven't kept up with the threats. If you're still forcing 90-day password changes and complex character requirements, you're making security worse, not better.
+
+Here's what NIST now recommends — and why most companies ignore it.
+
+Old rule: Change passwords every 90 days. New reality: Forced rotation leads to "Password1, Password2, Password3." Users pick predictable patterns. It's human nature.
+
+Old rule: Require uppercase, lowercase, numbers, symbols. New reality: "P@ssw0rd!" meets the requirements and gets cracked in seconds. Complexity requirements create the illusion of security.
+
+Better approach: Length over complexity. A 16-character passphrase is stronger than an 8-character complex password. "correct horse battery staple" beats "Tr0ub4dor!" every time.
+
+Better approach: Check against breach databases. Services like "Have I Been Pwned" let you verify passwords haven't appeared in known breaches. Reject compromised passwords at creation.
+
+Better approach: MFA everywhere. Passwords alone aren't enough. Hardware keys, authenticator apps, even SMS is better than nothing. Prioritize phishing-resistant methods like FIDO2.
+
+Better approach: Password managers. Users can't remember strong unique passwords for 100 accounts. Give them enterprise password managers. Make it easier to do the right thing.
+
+The goal isn't perfect passwords — it's reducing the attack surface. Length, uniqueness, MFA, and breach checking beat complexity theater.
+
+Need help modernizing your password policy? Link in description.

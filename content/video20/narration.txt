@@ -1,0 +1,19 @@
+Security budgets are always too small. Here's how to make the case for more — and how to prioritize when you don't get it.
+
+The reality: Boards don't speak risk matrices. They speak money. "We need better endpoint protection" means nothing. "A breach will cost us 4 million dollars and this tool reduces that risk by 60 percent" — that's a conversation.
+
+Step one: Quantify your current risk. What data do you have? What's it worth? What would a breach cost in downtime, legal fees, reputation damage? Use industry benchmarks if you don't have your own numbers.
+
+Step two: Map spending to risk reduction. Every security dollar should reduce specific risks. If you can't explain what risk a tool reduces, question whether you need it.
+
+Step three: Compare to industry benchmarks. Most companies spend 3 to 6 percent of IT budget on security. If you're below that, you have a benchmark argument. If you're above, you need to show results.
+
+Step four: Present total cost of ownership. That "cheap" solution with high operational overhead isn't actually cheap. Factor in training, maintenance, integration, staff time.
+
+When budget is tight, prioritize ruthlessly. Basic hygiene first: patching, MFA, backups, endpoint protection. Fancy threat intelligence means nothing if you haven't covered the basics.
+
+Quick wins matter. Show value fast. One prevented incident pays for a lot of tools. Document your wins and share them with leadership.
+
+Security is a business function. Speak the language of the business. Dollars, risk, compliance, reputation. That's how you get budget.
+
+Need help building a security business case? Link in description.

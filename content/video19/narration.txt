@@ -1,0 +1,19 @@
+SIEM — Security Information and Event Management. Every enterprise has one. Most aren't using it right. Here's what separates useful SIEM from expensive log storage.
+
+The problem: You're collecting terabytes of logs. Firewalls, endpoints, servers, cloud services. But when an incident happens, can you actually find what you need? Most SIEM deployments drown in noise.
+
+Mistake one: Collecting everything. Just because you can log it doesn't mean you should. Focus on high-value sources: authentication events, privileged access, network anomalies. Quality over quantity.
+
+Mistake two: No correlation rules. Raw logs don't tell stories. Correlation rules connect events: failed login followed by successful login from new IP followed by data access. That's the attack chain.
+
+Mistake three: Alert fatigue. A thousand alerts a day means zero alerts a day. Tune your rules. Remove false positives. If analysts ignore alerts, your SIEM isn't protecting anything.
+
+What good looks like: Use cases driving detection. Start with "what attacks am I trying to catch?" then build rules to catch them. Lateral movement, credential theft, data exfiltration — define success.
+
+Modern SIEM includes SOAR — Security Orchestration and Response. Automated playbooks that enrich alerts, gather context, and even take containment actions. Humans focus on real threats.
+
+The market: Splunk, Microsoft Sentinel, Elastic, Sumo Logic. They all work. The difference is how you use them.
+
+A SIEM that finds attacks is an investment. A SIEM that collects logs is an expense. Know the difference.
+
+Need help optimizing your SIEM? Link in description.

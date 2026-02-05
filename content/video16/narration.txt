@@ -1,0 +1,17 @@
+Your backup strategy is probably broken. I see it constantly: companies think they have backups, until they need them. Here's the 3-2-1 rule and why most people get it wrong.
+
+The rule: Three copies of your data. Two different storage types. One offsite. Simple, right? Here's where it falls apart.
+
+Mistake one: Backups connected to the network. Ransomware finds your backup shares. It encrypts them too. Now you have three copies of encrypted garbage. Air-gapped or immutable backups aren't optional.
+
+Mistake two: Never testing restores. Your backup job shows green checkmarks every night. Great. When's the last time you actually restored from it? Untested backups are Schrodinger's backups — they might work, they might not.
+
+Mistake three: No RPO and RTO planning. Recovery Point Objective — how much data can you lose? Recovery Time Objective — how long can you be down? If you haven't defined these, you can't design backups to meet them.
+
+Mistake four: Forgetting SaaS data. Microsoft 365 retention isn't backup. Salesforce recycle bins aren't backup. If you're not backing up your cloud data separately, it's at risk.
+
+Mistake five: Same credentials everywhere. Your backup admin account is the same as your domain admin? Attackers will find it. Separate credentials, separate systems, separate networks.
+
+Modern backup isn't just copies — it's immutability, it's air gaps, it's tested restores. The question isn't "do you have backups?" It's "can you actually recover?"
+
+Need a backup strategy review? Link in description.

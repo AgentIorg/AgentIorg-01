@@ -1,0 +1,17 @@
+Phishing is still the number one way attackers get in. Not zero-days, not sophisticated hacks — email. Here's how to actually defend against it.
+
+Layer one: Email filtering. Microsoft Defender, Proofpoint, Mimecast — these catch the obvious stuff. But they're not perfect. Attackers test against these filters before launching campaigns.
+
+Layer two: Link protection. URL rewriting and time-of-click analysis. That clean link in the email? It might redirect to malware an hour later. Real-time scanning catches what initial filters miss.
+
+Layer three: Attachment sandboxing. Don't trust file extensions. That PDF might be an executable. Detonate attachments in a sandbox before they reach the inbox. Yes, it adds delay. Yes, it's worth it.
+
+Layer four: DMARC, DKIM, and SPF. These authenticate that emails actually come from who they claim. If you're not enforcing DMARC at p=reject, attackers can spoof your domain to your own employees.
+
+Layer five: User training. I know, everyone hates it. But simulated phishing campaigns work. Not as punishment — as practice. Make reporting suspicious emails easy and reward people who do it.
+
+Layer six: Assume failure. Someone will click. Have endpoint detection ready. Limit what a compromised account can access. Segment your network so one click doesn't mean game over.
+
+The goal isn't zero clicks — that's impossible. The goal is catching the attack before it spreads.
+
+Need a phishing readiness assessment? Link in description.
