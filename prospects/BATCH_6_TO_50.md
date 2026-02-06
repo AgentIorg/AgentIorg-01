@@ -1,7 +1,4 @@
-# ✉️ BATCH 6-50 (50 VERIFIED CONTACTS - COPY/PASTE FORMAT)
-**Generated:** 2026-02-06 01:00 UTC
-**Total:** 44 verified emails across 10 companies (90%+ confidence)
-**Ready:** Copy/paste directly into Outlook
+# BATCH 6-50: 44 VERIFIED EMAILS
 
 ---
 
@@ -230,22 +227,4 @@ Hi David, I'm Chris Iorg, a Cisco CCIE Security holder at NWN. I specialize in i
 Hi Marcus, I'm Chris Iorg, a Cisco CCIE Security holder at NWN. I specialize in infrastructure for video and SaaS companies. We help with: • CDN and content security • Multi-cloud networking • Layer 1 structured cabling • Video infrastructure optimization • Global content delivery • API security and performance Not pitching — just introducing myself as a resource. Video infrastructure requires deep expertise. Keep me in your back pocket and feel free to use me as a resource in the future!
 
 **TO:** mpierce@panopto.com
-
----
-
-**📊 SUMMARY**
-
-44 verified emails across 9 companies:
-- WaFd Bank (5)
-- Virginia Mason (1)
-- Zillow (5)
-- Expeditors International (2)
-- Alaska Airlines (5)
-- Smartsheet (5)
-- ExtraHop Networks (5)
-- Tableau (5)
-- Panopto (5)
-
-**All Hunter.io verified (90-99% confidence)**
-**Ready to copy/paste → Outlook**
 
