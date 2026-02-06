@@ -11,7 +11,7 @@ These samples expand from "Layer 1 cabling + industry-specific basics" to **stra
 
 Hi Anthony,
 
-I'm Chris Iorg, a Cisco CCIE Security holder at NWN. We work with regional and national banks on something I see as a critical gap: most still treat their branch networks like it's 2010.
+I'm Chris Iorg, a Cisco CCIE Security holder at NWN. We work with regional and national banks on modernizing branch networks to support today's hybrid workforce, cloud-first operations, and evolving security landscape.
 
 We help banks like yours modernize in three key areas:
 
